@@ -2,11 +2,11 @@
   <img src="https://github.com/datasmartlab/frontend-challenge/blob/master/.github/assets/logo.png" height="150" width="150" alt="Datasmart" />
 </p>
 
-<h3 align="center">
-  Datasmart
-</h3>
+<h3 align="center">Datasmart</h3>
 
 <p align="center">Desafio para os candidatos à vaga de desenvolvedor Frontend na Datasmart.</p>
+
+<p align="center">:pushpin: Local de trabalho: Avaré - SP</p>
 
 <br>
 
@@ -16,11 +16,9 @@
 
 <br>
 
-Local de trabalho: Avaré - SP
-
 ## :memo: Apresentação
 
-O desafio é desenvolver uma aplicação responsiva consumindo os dados da API da Marvel seguindo todas as especificações abaixo.
+O desafio é desenvolver uma aplicação responsiva consumindo os dados da API da Marvel, seguindo todas as especificações abaixo.
 
 Esse desafio é um teste de nivelamento e para avaliarmos o quão bom você é :)
 
@@ -34,29 +32,29 @@ A Datasmart trabalha sempre com feedbacks construtivos e, portanto, daremos semp
 
 1. Faça um fork desse projeto para a sua conta pessoal do GitHub;
 
-2. Crie uma branch com o padrão: `frontend-challenge/seu-nome`;
+2. Crie uma branch com o padrão: `frontend-challenge/seu-nome-sobrenome`;
 
 3. Siga as especificações abaixo;
 
-4. Crie um README com as instruções para compilar, testar e rodar o projeto;
+4. Crie um README com uma descrição e instruções para compilar e rodar o projeto;
 
 5. Ao terminar o teste, solicite um pull request;
 
-6. Envie um email para `datasmartlab@datasmart.com.br` com o título: `Desenvolvedor Frontend - Seu Nome`. Adicione seu telefone, LinkedIn e seu perfil do GitHub.
+6. Envie um email para `vagas@datasmart.com.br` com o título: `Desenvolvedor Frontend - Seu Nome Sobrenome`. Adicione seu telefone, LinkedIn, seu perfil do GitHub e em anexo seu currículo.
 
 ## :wrench: Especificações técnicas
 
-- Utilizar framework ReactJS
+- Utilizar framework ReactJS;
 
-- Usar Redux para estado dos componentes
+- Usar Redux para estado dos componentes;
 
-- Utilizar Material UI para design
+- Utilizar Material UI para design;
 
-- Usar styled-components para CSS
+- Usar styled-components para CSS;
 
-- Mobile first e responsivo
+- Mobile first e responsivo;
 
-- Cores, layout e imagens são livres para sua criatividade
+- Cores, layout e imagens são livres para sua criatividade;
 
 - Utilizar a [API da Marvel](https://developer.marvel.com) para consumir os dados. É necessário se cadastrar no site e obter suas chaves de API.
 
@@ -76,7 +74,7 @@ A Datasmart trabalha sempre com feedbacks construtivos e, portanto, daremos semp
 
 ### Tela de Detalhes
 
-- O usuário ao clicar em algum personagem, ele irá para a tela de detalhes. Ao entrar nesta tela, deve ser feito uma nova requisição para consumir os dados deste personagem e exibir em uma lista, os detalhes não precisam gravar no Redux.
+- O usuário ao clicar em algum personagem, ele irá para a tela de detalhes. Ao entrar nesta tela, deve ser feito uma nova requisição para consumir os dados deste personagem e exibir em uma lista, os detalhes não precisam serem gravados no Redux.
 
 - A partir desse retorno, deve-se montar na tela uma listagem com os campos: nome, descrição, número de histórias em quadrinhos (comics), séries (series) e histórias (stories).
 
@@ -84,23 +82,27 @@ A Datasmart trabalha sempre com feedbacks construtivos e, portanto, daremos semp
 
 ## :heavy_check_mark: O que será avaliado?
 
-- Organização e estrutura do projeto
+- Conhecimento do framework React e suas bibliotecas utilizadas;
 
-- Código HTML, CSS e Javascript
+- Boas práticas com o código (lint, indentação, padrões, etc);
 
-- Boas práticas com o código (lint, indentação, padrões, etc)
+- Organização e estrutura do projeto;
 
-- Conhecimento do framework React e suas bibliotecas utilizadas
+- Código HTML, CSS e Javascript;
 
-- Uso de componentização
+- Uso de componentização;
 
-- Uso do Git
+- Uso do Git;
 
-- Documentação
+- Design e criatividade;
+
+- Perfomance;
+
+- Documentação.
 
 ## :question: Dúvidas
 
-Em caso de dúvidas, crie uma issue ou envie um e-mail para `datasmartlab@datasmart.com.br`.
+Em caso de dúvidas, crie uma issue ou envie um e-mail para `vagas@datasmart.com.br`.
 
 Boa sorte!
 
