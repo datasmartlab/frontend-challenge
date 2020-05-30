@@ -1,0 +1,15 @@
+import React from 'react';
+
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Thumbs from './pages/Thumbs';
+
+export default function Routes(){
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path='/' component={Thumbs}/>
+            </Switch>
+        </BrowserRouter>
+    )
+}
