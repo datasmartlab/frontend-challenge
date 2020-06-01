@@ -4,3 +4,10 @@ export function getHero(data){
         data
     }
 };
+
+export function handleLoading(isLoading){
+    return{
+        type: 'handleLoading',
+        isLoading
+    }
+}

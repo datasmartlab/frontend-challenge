@@ -45,15 +45,6 @@ export const Hero  = styled(ListItem)`
     border-radius: 8px;
     transition: background linear 0.05s;
 
-    &:hover{
-        background: rgba(94,7,7,0.46);
-        color: #fff;
-    }
-
-    &:hover a{
-        color: #fff;
-    }
-
     & + &{
         margin-top: 15px;
     }
@@ -63,18 +54,52 @@ export const Hero  = styled(ListItem)`
         align-items: center;
     }
 
-    img{
+    .img{
         width: 45px;
         height: 45px;
         margin-right: 20px;
         border-radius: 8px;
         border: 1px solid #e50b0b;
-        background: #bbb;
+        background: linear-gradient(to right, #6f1a1a 50%, #791c1c 50%);
+        background-size: 200% 100%;
+        animation: loading 1s linear infinite;
     }
 
-    a{
-        font-weight: bold;
-        color:  rgba(190,182,182,0.91);
-        cursor: pointer;
+    .content{
+        height: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content .name{
+        width: 150px;
+        background: linear-gradient(to right, #6f1a1a 50%, #791c1c 50%);
+        background-size: 200% 100%;
+        margin-left: 50px;
+        border-radius: 5px;
+        border: 1px solid #e50b0b;
+        animation: loading 1s linear infinite;
+        animation-delay: 0.05s;
+    }
+
+    .content .details{
+        width: 80px;
+        background: linear-gradient(to right, #6f1a1a 50%, #791c1c 50%);
+        background-size: 200% 100%;
+        margin: 0 20px;
+        border-radius: 5px;
+        border: 1px solid #e50b0b;
+        animation: loading 1s linear infinite;
+        animation-delay: 0.1s;
+    }
+
+    @keyframes loading {
+        from{
+            background-position: right bottom;
+        }
+        to{
+            background-position: left bottom;
+        }
     }
 `;

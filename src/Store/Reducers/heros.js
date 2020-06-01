@@ -1,15 +1,19 @@
 const INICIAL_STATE = {
-    heros: ["aaaas"]
+    isLoading: true,
+    heros: [null]
 };
 
 export default function hero(state = INICIAL_STATE, action){
-    if(action.type === 'getHero'){
-        return{
+    switch(action.type){
+        case "getHero": return{
             ...state,
             heros: action.data
         }
+
+        case "handleLoading": return{
+            ...state,
+            isLoading: action.isLoading
+        }
+        default: return state;
     }
-
-    return state;
-
 }
