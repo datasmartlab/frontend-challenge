@@ -31,7 +31,23 @@ function Thumbs({heros, isLoading, getHero, handleLoading}){
     }
 
     return (
-        <LoadThumbs/>
+        <Container> 
+            <h2>Personagens Malvel</h2>
+
+            <List>
+                {
+                    heros.heros.map(hero => (
+                        <Hero key={String(hero.id)}>
+                            <div className="avatar-information">
+                                <img src={`${hero.thumbnail.path}/standard_amazing.${hero.thumbnail.extension}`} alt="Hero"/>
+                            </div>
+                            {hero.name}
+                            <Link onClick={() => {}}>Ver detalhes</Link>
+                        </Hero>
+                    ))
+                }
+            </List>
+        </Container>
     )
 }
 
