@@ -10,9 +10,10 @@ export const Container = styled(Box)`
 
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 
     max-width: 600px;
-    max-height: 500px;
+    max-height: 510px;
     width: 100%;
     height: 100%;
     background: rgba(43,39,39,0.3);
@@ -26,10 +27,27 @@ export const Container = styled(Box)`
         align-items: center;
         justify-content: center;
         margin-bottom: 30px;
-        
         font-size: 28px;
         font-weight: bold;
         color: #fff;
+    }
+
+    ul{
+        overflow-y: scroll;
+        scroll-margin-left: 5px;
+        ::-webkit-scrollbar{
+            background: transparent;
+            border-radius: 10px;
+            width: 9px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: #e50b0b;
+            border-radius: 10px;
+        }
+    }
+
+    ul{
+        padding-right: 5px;
     }
 
     ul li{

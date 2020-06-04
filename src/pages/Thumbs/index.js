@@ -23,6 +23,9 @@ function Thumbs({heros, isLoading, getHero, handleLoading}){
     //eslint-disable-next-line
     }, [])
 
+    function teste(){
+        console.log(heros)
+    }
 
     while(isLoading === true){
         return(
@@ -42,7 +45,7 @@ function Thumbs({heros, isLoading, getHero, handleLoading}){
                                 <img src={`${hero.thumbnail.path}/standard_amazing.${hero.thumbnail.extension}`} alt="Hero"/>
                             </div>
                             {hero.name}
-                            <Link onClick={() => {}}>Ver detalhes</Link>
+                            <Link onClick={() => teste()}>Ver detalhes</Link>
                         </Hero>
                     ))
                 }
