@@ -1,10 +1,10 @@
 import api from  '../services/api';
 
 
-const getApiData =  () => {
+const getApiData =  (search) => {
     return  api.get(null,{
         params: {
-            nameStartsWith: 'spi',
+            nameStartsWith: search,
         },
     });
 }

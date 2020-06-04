@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {List, Link} from '@material-ui/core';
+import React, {useEffect, useState} from 'react';
+import {List, Link, Input} from '@material-ui/core';
 import {connect} from 'react-redux';
 
 import * as heroActions from '../../Store/Actions/heros';
@@ -12,16 +12,19 @@ import './styles';
 
 
 function Thumbs({heros, isLoading, getHero, handleLoading}){
+    const [search, setSearch] = useState(null);
     
     useEffect(() => {
         const getData = async () => {
-            const response = await getApiData();
+            if(search === '') setSearch(null);
+
+            const response = await getApiData(search);
             getHero(response.data.data.results)
             handleLoading(false)
         }
         getData();
     //eslint-disable-next-line
-    }, [])
+    }, [search])
 
     function teste(){
         console.log(heros)
@@ -36,6 +39,13 @@ function Thumbs({heros, isLoading, getHero, handleLoading}){
     return (
         <Container> 
             <h2>Personagens Malvel</h2>
+            <Input 
+                placeholder="Encontre seus heróis"
+                onChange={e => {setSearch(e.target.value)}}
+                style={{
+                    marginRight: '15px'
+                }}
+            />
 
             <List>
                 {
