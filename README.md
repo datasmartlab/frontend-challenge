@@ -1,12 +1,13 @@
 ## Primeiros Passos
 
-1. Criar uma conta no site da Marvel
+### 1. Criar uma conta no site da Marvel
 
 ![Sign up](https://github.com/indominuShot/frontend-challenge/blob/frontend-challenge/LuanSouza/assets/Anota%C3%A7%C3%A3o%202020-06-06%20194159.png?raw=true)
 
 
 ### 2. Clonar o projeto:
    #### - Para isto, escolha um repositório local no prompt de comando e digite:
+   `git clone "https://github.com/indominuShot/frontend-challenge.git"`
    
    
 
