@@ -23,11 +23,20 @@ body{
 div .background{
   background-image: url("./assets/baclground.jpg");
   
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
   
   height: 100vh; 
   
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+div .headerMarvel{
+  background-image: url("./assets/marvel-cartoon.jpg");  
+  height: 60vh; 
+  filter: brightness(0.7);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover

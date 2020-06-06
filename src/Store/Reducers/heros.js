@@ -14,6 +14,7 @@ export default function hero(state = INICIAL_STATE, action){
             ...state,
             isLoading: action.isLoading
         }
+        
         default: return state;
     }
 }

@@ -8,62 +8,66 @@ import './styles';
 
 export default function LoadThumbs(){
     return (
-        <Container> 
-            <h2>Personagens Malvel</h2>
+        <>
+            <div className="background"></div>
+            
+            <Container> 
+                <h2>Personagens Malvel</h2>
 
-            <List>
-                
-                <Hero>
-                    <div className="avatar-information">
-                        <div className="img"></div>
-                    </div>
-                    <div className="content">
-                        <div className="name"></div>
-                        <div className="details"></div>
-                    </div>
-                </Hero>
+                <List>
+                    
+                    <Hero>
+                        <div className="avatar-information">
+                            <div className="img"></div>
+                        </div>
+                        <div className="content">
+                            <div className="name"></div>
+                            <div className="details"></div>
+                        </div>
+                    </Hero>
 
-                <Hero>
-                    <div className="avatar-information">
-                        <div className="img"></div>
-                    </div>
-                    <div className="content">
-                        <div className="name"></div>
-                        <div className="details"></div>
-                    </div>
-                </Hero>
+                    <Hero>
+                        <div className="avatar-information">
+                            <div className="img"></div>
+                        </div>
+                        <div className="content">
+                            <div className="name"></div>
+                            <div className="details"></div>
+                        </div>
+                    </Hero>
 
-                <Hero>
-                    <div className="avatar-information">
-                        <div className="img"></div>
-                    </div>
-                    <div className="content">
-                        <div className="name"></div>
-                        <div className="details"></div>
-                    </div>
-                </Hero>
+                    <Hero>
+                        <div className="avatar-information">
+                            <div className="img"></div>
+                        </div>
+                        <div className="content">
+                            <div className="name"></div>
+                            <div className="details"></div>
+                        </div>
+                    </Hero>
 
-                <Hero>
-                    <div className="avatar-information">
-                        <div className="img"></div>
-                    </div>
-                    <div className="content">
-                        <div className="name"></div>
-                        <div className="details"></div>
-                    </div>
-                </Hero>
+                    <Hero>
+                        <div className="avatar-information">
+                            <div className="img"></div>
+                        </div>
+                        <div className="content">
+                            <div className="name"></div>
+                            <div className="details"></div>
+                        </div>
+                    </Hero>
 
-                <Hero>
-                    <div className="avatar-information">
-                        <div className="img"></div>
-                    </div>
-                    <div className="content">
-                        <div className="name"></div>
-                        <div className="details"></div>
-                    </div>
-                </Hero>
-     
-            </List>
-        </Container>
+                    <Hero>
+                        <div className="avatar-information">
+                            <div className="img"></div>
+                        </div>
+                        <div className="content">
+                            <div className="name"></div>
+                            <div className="details"></div>
+                        </div>
+                    </Hero>
+        
+                </List>
+            </Container>
+        </>
     )
 }

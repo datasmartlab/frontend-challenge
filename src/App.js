@@ -9,7 +9,6 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-          <div className="background"></div>
           <Route/>
       </div>
     </Provider>

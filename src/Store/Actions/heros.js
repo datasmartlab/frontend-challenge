@@ -10,4 +10,4 @@ export function handleLoading(isLoading){
         type: 'handleLoading',
         isLoading
     }
-}
+};
