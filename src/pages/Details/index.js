@@ -7,6 +7,7 @@ import {FaArrowLeft} from 'react-icons/fa';
 import getHeroByID from '../../utils/getHeroByID';
 import {Container, Content} from './styles';
 
+
 export default function Details(){
     const heroName = localStorage.getItem('activeHero');
     const [heros, setHeros] = useState([]);
