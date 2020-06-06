@@ -42,7 +42,7 @@ div .headerMarvel{
   background-size: cover
 }
 
-@media (max-width : 480px){
+@media (max-width : 960px){
   div .headerMarvel{
     height: 40vh;
   }

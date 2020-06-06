@@ -9,6 +9,7 @@ export const Container = styled(Box)`
     grid-template-columns: 1fr 2fr 1fr;
     column-gap: 8px;
     background: #ddd;
+    min-width: 300px;
 
     button{
         background: #751d1d;
@@ -17,21 +18,24 @@ export const Container = styled(Box)`
         margin-right: 8px;
         height: 100%;
         width: 100%;
+        max-width: 480px;
     }
 
     button:hover{
         background: #531515;
     }
 
-    @media (max-width : 480px) {
+    @media (max-width : 960px) {
         flex-direction: column;
         padding: 20px 30px;
         
 
         img{
             margin-bottom: 15px;
+            max-width: 480px;
         }
     }
+
 `;
 
 
@@ -72,11 +76,12 @@ export const Content = styled(Box)`
         margin-top: 10px;
     }
 
-    @media (max-width : 480px) {
+    @media (max-width : 960px) {
         margin: 0;
         margin-bottom: 15px;
         width: 100vh;
         max-width: 100%;
 
     }
+    
 `;

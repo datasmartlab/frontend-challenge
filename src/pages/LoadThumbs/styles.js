@@ -37,7 +37,7 @@ export const Container = styled(Box)`
         justify-content: space-between;
     }    
 
-    @media (max-width : 480px){
+    @media (max-width : 960px){
         padding: 0 5px;
         box-shadow: none;
         background: transparent;
@@ -126,7 +126,7 @@ export const Hero  = styled(ListItem)`
         }
     }
 
-    @media (max-width : 480px){
+    @media (max-width : 960px){
         
         .content .name{
             margin: 0;
