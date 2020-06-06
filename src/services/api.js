@@ -1,8 +1,8 @@
 import axios from 'axios';
 import md5 from 'md5';
 
-const publicKey = '9e4f80bcd2d4a53abf1798ab7451767e';
-const privateKey = 'dab38b7d7a751df582a3ccb558a2e998df2b2a0a';
+const publicKey = 'Sua Chave Pública';
+const privateKey = 'Sua Chave Privada';
 const ts = Date.now();  
 
 
