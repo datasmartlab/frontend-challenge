@@ -6,16 +6,16 @@
 
 
 
-#### 2. Criar sua chave de autenticação e inseri-la no arquivo services/api.js
+### 2. Criar sua chave de autenticação e inseri-la no arquivo services/api.js
 
 
-#### 3. Clonar o projeto:
-        - Para isto, escolha um repositório local no prompt de comando e digite:
+### 3. Clonar o projeto:
+   #### - Para isto, escolha um repositório local no prompt de comando e digite:
          `git clone "https://github.com/indominuShot/frontend-challenge.git"`
       
-      
-#### 4. Instale as dependências na raíz do projeto:
-    - `yarn` ou `npm install`
+     
+### 4. Instale as dependências na raíz do projeto:
+   - `yarn` ou `npm install`
 
 
 ## Rodando o projeto
