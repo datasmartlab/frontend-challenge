@@ -19,6 +19,7 @@ export default function Details(){
             setLoading(false);
         }
         getData();
+        //eslint-disable-next-line
     }, []);
     
     while(loading === true){
@@ -40,7 +41,7 @@ export default function Details(){
                         </Link>
                         
                         <img src={`${hero.thumbnail.path}/portrait_incredible.${hero.thumbnail.extension}`} alt=""/>
-                        <Content maxWidth={'50vw'}>
+                        <Content>
                             <h2>{hero.name}</h2>
                             <p>{hero.description}</p>
                         </Content>

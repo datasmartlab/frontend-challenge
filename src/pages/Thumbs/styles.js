@@ -43,6 +43,7 @@ export const Container = styled(Box)`
         ::-webkit-scrollbar-thumb{
             background: #e50b0b;
             border-radius: 10px;
+            border: 1px solid #000;
         }
     }
 
@@ -54,6 +55,22 @@ export const Container = styled(Box)`
         display: flex;
         justify-content: space-between;
     }    
+
+    @media (max-width : 480px){
+        padding: 0 5px;
+        box-shadow: none;
+        background: transparent;
+        height: 100%;
+        font-size: 14px;
+
+        ul{
+            margin: auto 8px;
+        }
+
+        input{
+            width: 300px;
+        }
+    }
 `;
 
 export const Hero  = styled(ListItem)`
@@ -95,4 +112,6 @@ export const Hero  = styled(ListItem)`
         color:  rgba(190,182,182,0.91);
         cursor: pointer;
     }
+
+    
 `;

@@ -16,10 +16,21 @@ export const Container = styled(Box)`
         font-weight: bold;
         margin-right: 8px;
         height: 100%;
+        width: 100%;
     }
 
     button:hover{
         background: #531515;
+    }
+
+    @media (max-width : 480px) {
+        flex-direction: column;
+        padding: 20px 30px;
+        
+
+        img{
+            margin-bottom: 15px;
+        }
     }
 `;
 
@@ -53,7 +64,19 @@ export const Content = styled(Box)`
         font-size: 18   px;
     }
 
+    .counter{
+        min-width: 10vw;
+    }
+
     .counter + .counter{
         margin-top: 10px;
+    }
+
+    @media (max-width : 480px) {
+        margin: 0;
+        margin-bottom: 15px;
+        width: 100vh;
+        max-width: 100%;
+
     }
 `;

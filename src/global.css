@@ -17,7 +17,7 @@ body, html{
 }
 
 body{
-    background-color: rgb(97, 25, 25);
+    background-color: #000;
 }
 
 div .background{
@@ -40,4 +40,10 @@ div .headerMarvel{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
+}
+
+@media (max-width : 480px){
+  div .headerMarvel{
+    height: 40vh;
+  }
 }

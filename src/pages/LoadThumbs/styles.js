@@ -36,6 +36,28 @@ export const Container = styled(Box)`
         display: flex;
         justify-content: space-between;
     }    
+
+    @media (max-width : 480px){
+        padding: 0 5px;
+        box-shadow: none;
+        background: transparent;
+        height: 100vh;
+        font-size: 14px;
+
+        ul{
+            margin: auto 8px;
+        }
+        .name{
+            margin: 0;
+            width: 10px;
+        }
+
+        .details{
+            margin: 0;
+            width: 10px;
+        }
+    }
+   
 `;
 
 export const Hero  = styled(ListItem)`
@@ -92,6 +114,7 @@ export const Hero  = styled(ListItem)`
         border: 1px solid #e50b0b;
         animation: loading 1s linear infinite;
         animation-delay: 0.1s;
+
     }
 
     @keyframes loading {
@@ -102,4 +125,20 @@ export const Hero  = styled(ListItem)`
             background-position: left bottom;
         }
     }
+
+    @media (max-width : 480px){
+        
+        .content .name{
+            margin: 0;
+            margin-left: 10px;
+            width: 40vw;
+        }
+
+        .content .details{
+            margin: 0;
+            width: 15vw;
+        }
+    }
+
+   
 `;
