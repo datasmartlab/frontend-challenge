@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { getHeroInfo } from "../../services/apiMarvel";
 import {Button} from '@mui/material'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface HeroInterface {
     id: number;
@@ -45,7 +46,7 @@ export function HeroInfo(){
                     </div>
                 )
             })}
-            <NavLink to="/"><Button>Voltar</Button></NavLink>
+            <NavLink to="/"><Button variant="contained" startIcon={<ArrowBackIcon/>}>Voltar</Button></NavLink>
         </div>
     )
 }

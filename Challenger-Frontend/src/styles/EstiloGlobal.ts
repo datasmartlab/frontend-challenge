@@ -8,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     outline: 0;
+    font-family: 'Marvel', sans-serif;
+    
+  }
+  body{
+    background-color: #333333;
   }
 
 `;

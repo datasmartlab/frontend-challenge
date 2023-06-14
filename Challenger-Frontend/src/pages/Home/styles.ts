@@ -1,15 +1,26 @@
-import styled from "styled-components";
+// export const HomeContainer = styled.div`
+// `;
 
-export const HomeContainer = styled.div`
-  .borda {
-    border: 2px solid black;
-    padding: 5px;
-    margin: 10px;
-    list-style: none;
-    font-size: 1.5rem;
+import { styled } from '@mui/system';
+import {Grid,Typography} from '@mui/material';
+
+export const MyGrid = styled(Grid)({
+  ":hover":{filter:'blur(1.5px) brightness(0.4)','transition':'200ms'}
+});
+
+export const MyTypography = styled(Typography)({
+  textShadow:'1.5px 1.5px red',
+  position:'absolute',
+  display:'block',
+  width:'100%',
+  height:'100%',
+  color:'white',
+  flexDirection:'column',
+  paddingLeft:0.4,
+  paddingTop:0.5,
+  opacity:0,
+  breakAfter:'auto',
+  ":hover":{
+      opacity: 1,
   }
-  .heroImage {
-    max-width: 20rem;
-    max-height: 20rem;
-  }
-`;
+});
