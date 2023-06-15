@@ -5,5 +5,5 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   background-color: black;
   color: white;
-  height: 3rem;
+  height: "100%";
 `;

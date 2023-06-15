@@ -1,9 +1,10 @@
 import { HeaderContainer } from "./styles";
+import { Typography } from "@mui/material";
 
 export function Header() {
   return (
     <HeaderContainer>
-      <h1>Herói</h1>
+      <Typography variant="h2">Herói</Typography>
     </HeaderContainer>
   );
 }
