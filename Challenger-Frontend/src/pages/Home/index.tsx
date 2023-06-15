@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { fetchHeroes } from "../../redux/fetchHeroes";
 import { getCountHeroes } from "../../services/apiMarvel";
 import { Pagination, Grid, Box } from "@mui/material";
-import { MyTypography } from "./styles";
+import { MyTypography,HeroGridBox } from "./styles";
 // import {blue} from '@mui/material/colors'
 interface HeroInterface {
   id: number;
@@ -47,24 +47,12 @@ export function Home() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          paddingY: 4,
+          paddingY: 6,
         }}
       >
         {heroes.map((hero) => (
           <NavLink to="/heroinfo" key={hero.id} state={{ id: hero.id }}>
-            <Box
-              sx={{
-                position: "relative",
-                ":hover .imagem": {
-                  filter: "blur(1px) brightness(0.5)",
-                  transform: "scale(1.15)",
-                  transition: "300ms",
-                },
-                ":hover .Mytypography": {
-                  opacity: 1,
-                },
-              }}
-            >
+            <HeroGridBox>
               <Box
                 sx={{
                   width: "20rem",
@@ -78,13 +66,13 @@ export function Home() {
               <MyTypography className="Mytypography" variant="h3">
                 {hero.name}
               </MyTypography>
-            </Box>
+            </HeroGridBox>
           </NavLink>
         ))}
       </Grid>
       <Pagination
         boundaryCount={1}
-        sx={{ display: "flex", justifyContent: "center", paddingBottom: 2 }}
+        sx={{ display: "flex", justifyContent: "center", paddingBottom: 4 }}
         count={numpages}
         shape="rounded"
         variant="outlined"
@@ -96,8 +84,3 @@ export function Home() {
     </div>
   );
 }
-/*
-  <Tooltip disableHoverListener title="Add">
-    <Button>Focus or touch</Button>
-  </Tooltip> 
-*/

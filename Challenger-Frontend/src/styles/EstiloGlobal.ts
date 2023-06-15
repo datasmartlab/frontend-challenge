@@ -9,12 +9,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
     font-family: 'Marvel', sans-serif;
-    
   }
   body{
     background-color: #333333;
   }
-
+  /* @media (min-width: 62.5rem){
+    body{
+      
+    }
+  } */
 `;
 
 export default GlobalStyle;

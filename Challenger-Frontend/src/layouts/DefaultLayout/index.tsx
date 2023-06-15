@@ -5,7 +5,7 @@ export function DefaultLayout(){
     return(
         <>
             <Header/>
-            <Container maxWidth="lg" sx={{backgroundColor:"#262626",}}>
+            <Container maxWidth="lg" sx={{backgroundColor:"#262626",minHeight:"100vh"}}>
                 <Outlet/>
             </Container>
         </>

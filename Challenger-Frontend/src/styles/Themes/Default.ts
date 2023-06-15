@@ -1,43 +1,36 @@
 import { createTheme } from "@mui/material/styles";
 
 export const DefaultTheme = createTheme({
-  palette: {
-    primary: {
-      light: "#757ce8",
-      main: "#3f50b5",
-      dark: "#002884",
-      contrastText: "#fff",
-    },
-    secondary: {
-      light: "#ff7961",
-      main: "#f44336",
-      dark: "#ba000d",
-      contrastText: "#000",
-    },
-  },
   components: {
     MuiPagination: {
       styleOverrides: {
         root: {
           "& .MuiPaginationItem-root": {
-            color: "red", // Substitua 'red' pela cor desejada
+            color: "red",
             backgroundColor: "white",
-            "&.MuiPaginationItem-ellipsis": {
-              background: "none",
+            "&:hover":{
+              color: "white",
+              backgroundColor: "black",
             },
+
+            "&.MuiPaginationItem-ellipsis,&:hover": {
+              background: "none",
+              color:"red",
+            },
+            
+            
           },
           ul: {
-            "& .Mui-selected": {
-              color: "white", // Substitua 'red' pela cor desejada
-              backgroundColor: "gray",
-            },
-            "& .MuiPaginationItem-page:hover": {
-              backgroundColor: "gray", // Substitua 'red' pela cor desejada
+            "& .Mui-selected ": {
+              color: "white",
+              backgroundColor: "red",
             },
             "&.MuiPaginationItem-icon": {
               "&:hover, &.Mui-selected, &.Mui-disabled": {
-                backgroundColor: "red", // Substitua 'red' pela cor desejada
+                backgroundColor: "red",
+                
               },
+              
             },
           },
         },
@@ -45,3 +38,34 @@ export const DefaultTheme = createTheme({
     },
   },
 });
+
+DefaultTheme.typography.h3 = {
+  fontSize: '2.2rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.8rem',
+  },
+  [DefaultTheme.breakpoints.up('md')]: {
+    fontSize: '2.4rem',
+  },
+};
+
+DefaultTheme.typography.h4 = {
+  fontSize: '2rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.6rem',
+  },
+  [DefaultTheme.breakpoints.up('md')]: {
+    fontSize: '2rem',
+  },
+};
+DefaultTheme.typography.body1={
+  fontSize: '1.4rem',
+  '@media (min-width:600px)': {
+    fontSize: '1rem',
+  },
+  [DefaultTheme.breakpoints.up('md')]: {
+    fontSize: '2rem',
+  },
+}
+
+DefaultTheme

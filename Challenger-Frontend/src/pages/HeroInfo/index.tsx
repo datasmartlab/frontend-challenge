@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { getHeroInfo } from "../../services/apiMarvel";
-import {Button} from '@mui/material'
+import {Button, Box,Typography} from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import Grid from '@mui/material/Grid';
 interface HeroInterface {
     id: number;
     name: string;
@@ -18,9 +18,9 @@ export function HeroInfo(){
     const location = useLocation();
     const [id] = useState(location.state?.id);
     const [hero,setHero]=useState<HeroInterface[]>([])
-
+    
    const getHeroCallBack =useCallback(async function getHero(){
-        const resposta= await getHeroInfo(id);
+        const resposta = await getHeroInfo(id);
         setHero(resposta);
         console.log(resposta)
     }
@@ -31,22 +31,43 @@ export function HeroInfo(){
     
     return(
         <div>
-            <img src=""/>
-            {hero.map((item)=>{
-                return(
-                    <div key={item.id}>
-                        <h1>Nome:{item.name}</h1>
-                        <h2>Numero de Comics: {item.comics.available}</h2>
-                        <h2>Numero de series: {item.series.available}</h2>
-                        <h2>Numero de stories: {item.stories.available}</h2>
-                        <h2>Descrção:</h2>
-                        <p>{item.description}</p>
+            <NavLink to="/"><Button sx={{marginY:2, background:"none",border:"1px solid gray",":hover":{backgroundColor:"gray"}}} variant="contained" startIcon={<ArrowBackIcon/>}>Voltar</Button></NavLink>
+                {hero.map((item)=>{
+                    return(
+                        <Grid key={item.id} container>
+                            <Grid item xs ><Box sx={{width:"100%",height:"100%",borderRadius:8,paddingX:2,paddingBottom:2}} component="img" src={`${item.thumbnail.path}.${item.thumbnail.extension}`}/></Grid>
+                                <Grid item xs>
+                                    <Typography color="white" variant="h3">Nome:</Typography>
+                                    <Typography sx={{marginBottom:2}} color="gray" variant="h4">{item.name}</Typography>
+                                    
+                                    <Typography color="white" variant="h3">Comics:</Typography>
+                                    <Typography sx={{marginBottom:2}} color="gray" variant="h4">{item.comics.available} volumes</Typography>
 
-                        <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`}/>
-                    </div>
-                )
-            })}
-            <NavLink to="/"><Button variant="contained" startIcon={<ArrowBackIcon/>}>Voltar</Button></NavLink>
+                                    <Typography color="white" variant="h3">series:</Typography>
+                                    <Typography sx={{marginBottom:2}} color="gray" variant="h4">{item.series.available} series</Typography>
+
+                                    <Typography color="white" variant="h3">stories:</Typography>
+                                    <Typography sx={{marginBottom:2}} color="gray" variant="h4">{item.stories.available} histórias</Typography>
+                                </Grid>
+                            <Grid item xs={12} sx={{paddingLeft:2}}>
+                                {item.description!==""?(
+                                    <>
+                                        <Typography color="white" sx={{marginBottom:2}} variant="h3">Descrição:</Typography>
+                                        <Typography variant="body1"  color="gray">{item.description}</Typography>
+                                    </>
+                                ):(
+                                    <>
+                                        <Typography color="#f0141e" variant="h4">Sem Descrição </Typography>
+                                    </>
+                                )}
+                                
+                            </Grid>
+                        </Grid>
+                    )
+                })}
+            
         </div>
     )
 }
+
+//sx={{fontSize:"1.3rem"}}

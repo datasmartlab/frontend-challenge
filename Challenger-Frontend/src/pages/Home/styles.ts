@@ -1,14 +1,23 @@
 import { styled } from "@mui/system";
-import { Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-export const MyGrid = styled(Grid)({
-  ":hover": { filter: "blur(1.5px) brightness(0.4)", transition: "200ms" },
+export const HeroGridBox = styled(Box)({
+  position: "relative",
+  ":hover .imagem": {
+    filter: "blur(1px) brightness(0.3)",
+    transform: "scale(1.15)",
+    transition: "300ms",
+    },
+  ":hover .Mytypography": {
+    opacity: 1,
+  },
 });
 
 export const MyTypography = styled(Typography)({
+  paddingTop:"20%",
   textShadow: "2px 2px red",
   position: "absolute",
-  top: "55%",
+  top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   color: "white",
