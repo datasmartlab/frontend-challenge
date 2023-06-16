@@ -5,7 +5,7 @@ import { AnyAction } from "redux";
 import { NavLink } from "react-router-dom";
 import { fetchHeroes } from "../../redux/fetchHeroes";
 import { Pagination, Grid, Box } from "@mui/material";
-import { MyTypography, HeroGridBox } from "./styles";
+import { HeroBoxTypography, HeroGridBox } from "./styles";
 
 interface HeroInterface {
   id: number;
@@ -75,9 +75,9 @@ export function Home() {
                 className="imagem"
                 src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
               />
-              <MyTypography className="Mytypography" variant="h3">
+              <HeroBoxTypography className="HeroBoxTypography" variant="h3">
                 {hero.name}
-              </MyTypography>
+              </HeroBoxTypography>
             </HeroGridBox>
           </NavLink>
         ))}

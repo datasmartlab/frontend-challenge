@@ -8,12 +8,12 @@ export const HeroGridBox = styled(Box)({
     transform: "scale(1.15)",
     transition: "300ms",
     },
-  ":hover .Mytypography": {
+  ":hover .HeroBoxTypography": {
     opacity: 1,
   },
 });
 
-export const MyTypography = styled(Typography)({
+export const HeroBoxTypography = styled(Typography)({
   paddingTop:"20%",
   textShadow: "2px 2px red",
   position: "absolute",

@@ -10,9 +10,6 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     font-family: 'Marvel', sans-serif;
   }
-  body{
-    background-color: #333333;
-  }
   /* @media (min-width: 62.5rem){
     body{
       

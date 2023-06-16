@@ -1,10 +1,18 @@
 import { HeaderContainer } from "./styles";
-// import { Typography } from "@mui/material";
-export function Header() {
+import {Button} from "@mui/material"
+import {LightMode,DarkMode} from '@mui/icons-material';
+interface HeaderProps {
+  handleTemaChange: () => void;
+  tema:boolean
+}
+
+export function Header({handleTemaChange,tema}:HeaderProps) {
   return (
     <HeaderContainer>
       <img className="Imagem" src="/images/marvel.svg" />
-      {/* <Typography sx={{paddingY:1}} variant="h2">Herói</Typography> */}
+      <Button size="large" sx={{position: 'absolute', top: 0, right: 0,marginTop:"0.8rem",marginRight:"1rem"}}  variant="contained" onClick={handleTemaChange}>
+        {tema?(<DarkMode/>):(<LightMode/>)}
+      </Button>
     </HeaderContainer>
   );
 }
