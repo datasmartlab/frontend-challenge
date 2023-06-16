@@ -8,15 +8,15 @@ import { DefaultTheme } from "./styles/Themes/Default";
 function App() {
   return (
     <ThemeProvider theme={DefaultTheme}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<DefaultLayout/>}>
-        <Route path="/" element={<Home />} />
-        <Route path="/heroinfo" element={<HeroInfo />} />
-        </Route>
-      </Routes>
-      <GlobalStyle />
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DefaultLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/heroinfo" element={<HeroInfo />} />
+          </Route>
+        </Routes>
+        <GlobalStyle />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

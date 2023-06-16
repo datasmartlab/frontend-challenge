@@ -8,35 +8,22 @@ const privateKey = "afa40204a5b1766c14d1f00f14348ce9a922e9f0";
 const timestamp = new Date().getMilliseconds();
 const hash = md5(timestamp + privateKey + publicKey);
 
-export async function getHeroes(offset=0,limite=20) {
+export async function getHeroes(offset = 0, limite = 20) {
   const api = axios.create({
     baseURL: baseURL,
     params: {
       apikey: publicKey,
       ts: timestamp,
       hash: hash,
-      limit:limite,
-      offset:offset,
+      limit: limite,
+      offset: offset,
     },
   });
   const resposta = await api.get("characters");
-  return resposta.data.data.results;
+  return resposta.data.data;
 }
 
-export async function getCountHeroes() {
-  const api = axios.create({
-    baseURL: baseURL,
-    params: {
-      apikey: publicKey,
-      ts: timestamp,
-      hash: hash,
-    },
-  });
-  const resposta = await api.get("characters");
-  return resposta.data.data.total
-}
-
-export async function getHeroInfo(id:number){
+export async function getHeroInfo(id: number) {
   const api = axios.create({
     baseURL: baseURL,
     params: {

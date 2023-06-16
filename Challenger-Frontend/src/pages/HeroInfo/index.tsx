@@ -22,7 +22,6 @@ export function HeroInfo(){
    const getHeroCallBack =useCallback(async function getHero(){
         const resposta = await getHeroInfo(id);
         setHero(resposta);
-        console.log(resposta)
     }
     ,[id])
     useEffect(()=>{

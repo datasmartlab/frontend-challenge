@@ -1,20 +1,25 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ThunkDispatch } from "redux-thunk"; // Importe ThunkDispatch
-import { AnyAction } from "redux"; // Importe AnyAction
+import { ThunkDispatch } from "redux-thunk";
+import { AnyAction } from "redux";
 import { NavLink } from "react-router-dom";
 import { fetchHeroes } from "../../redux/fetchHeroes";
-import { getCountHeroes } from "../../services/apiMarvel";
 import { Pagination, Grid, Box } from "@mui/material";
-import { MyTypography,HeroGridBox } from "./styles";
-// import {blue} from '@mui/material/colors'
+import { MyTypography, HeroGridBox } from "./styles";
+
 interface HeroInterface {
   id: number;
   name: string;
   thumbnail: { extension: string; path: string };
 }
+
+interface HeroesInterface {
+  total: number;
+  results: HeroInterface[];
+}
+
 interface RootState {
-  heroes: HeroInterface[];
+  heroes: HeroesInterface;
 }
 
 export function Home() {
@@ -25,18 +30,25 @@ export function Home() {
     useDispatch();
   const heroes = useSelector((state: RootState) => state.heroes);
 
-  const paginacaoCallback = useCallback(
-    async function paginacao() {
-      const count = await getCountHeroes();
-      setNumpages(Math.ceil(count / limite));
+  const puxarHeroesCallback = useCallback(
+    async function puxarHeroes() {
+      await dispatch(fetchHeroes(offset, limite));
+
+      if (!isNaN(heroes.total)) {
+        const count = heroes.total;
+        setNumpages(Math.ceil(count / limite));
+      }
     },
-    [limite]
+    [dispatch, limite, offset, heroes.total]
   );
 
   useEffect(() => {
-    dispatch(fetchHeroes(offset, limite));
-    paginacaoCallback();
-  }, [dispatch, paginacaoCallback, offset, limite]);
+    puxarHeroesCallback();
+  }, [puxarHeroesCallback, offset, limite]);
+
+  if (!Array.isArray(heroes.results)) {
+    return null;
+  }
 
   return (
     <div>
@@ -50,7 +62,7 @@ export function Home() {
           paddingY: 6,
         }}
       >
-        {heroes.map((hero) => (
+        {heroes.results.map((hero) => (
           <NavLink to="/heroinfo" key={hero.id} state={{ id: hero.id }}>
             <HeroGridBox>
               <Box
