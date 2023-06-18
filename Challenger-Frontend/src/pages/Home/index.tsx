@@ -83,7 +83,7 @@ export function Home() {
         ))}
       </Grid>
       <Pagination
-        boundaryCount={1}
+        boundaryCount={2}
         sx={{ display: "flex", justifyContent: "center", paddingBottom: 4 }}
         count={numpages}
         shape="rounded"
