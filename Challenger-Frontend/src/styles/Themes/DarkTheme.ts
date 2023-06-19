@@ -1,7 +1,7 @@
 import { grey, red } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
-const temaEscuro = createTheme({
+const DarkTheme = createTheme({
   palette: {
     info:{
       main:grey[400],
@@ -48,33 +48,33 @@ const temaEscuro = createTheme({
   },
 });
 
-temaEscuro.typography.h3 = {
+DarkTheme.typography.h3 = {
   fontSize: "2.2rem",
   "@media (min-width:600px)": {
     fontSize: "1.8rem",
   },
-  [temaEscuro.breakpoints.up("md")]: {
+  [DarkTheme.breakpoints.up("md")]: {
     fontSize: "2.4rem",
   },
 };
 
-temaEscuro.typography.h4 = {
+DarkTheme.typography.h4 = {
   fontSize: "2rem",
   "@media (min-width:600px)": {
     fontSize: "1.6rem",
   },
-  [temaEscuro.breakpoints.up("md")]: {
+  [DarkTheme.breakpoints.up("md")]: {
     fontSize: "2rem",
   },
 };
-temaEscuro.typography.body1 = {
+DarkTheme.typography.body1 = {
   fontSize: "1.4rem",
   "@media (min-width:600px)": {
     fontSize: "1rem",
   },
-  [temaEscuro.breakpoints.up("md")]: {
+  [DarkTheme.breakpoints.up("md")]: {
     fontSize: "2rem",
   },
 };
 
-export default temaEscuro;
+export default DarkTheme;

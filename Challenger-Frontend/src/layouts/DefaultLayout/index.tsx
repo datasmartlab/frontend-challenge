@@ -1,31 +1,31 @@
 import { Outlet } from "react-router-dom";
 import { Container } from "@mui/material";
 import { Header } from "../../components/Header/index";
-import temaClaro from "../../styles/Themes/TemaClaro";
-import temaEscuro from "../../styles/Themes/TemaEscuro";
+import lightTheme from "../../styles/Themes/LightTheme";
+import DarkTheme from "../../styles/Themes/DarkTheme";
 import { ThemeProvider } from "@mui/material";
-import GlobalStyle from "../../styles/EstiloGlobal";
+import GlobalStyle from "../../styles/GlobalStyles";
 import { useState, useEffect } from "react";
 
 export function DefaultLayout() {
-  const [tema, setTema] = useState(() => {
-    const temaSalvo = localStorage.getItem("tema");
-    return temaSalvo ? JSON.parse(temaSalvo) : true;
+  const [darkTheme, setdarkTheme] = useState(() => {
+    const SavcedDarkTheme = localStorage.getItem("darkTheme");
+    return SavcedDarkTheme ? JSON.parse(SavcedDarkTheme) : true;
   });
 
   useEffect(() => {
-    localStorage.setItem("tema", JSON.stringify(tema));
-  }, [tema]);
+    localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+  }, [darkTheme]);
 
-  const handleTemaChange = () => {
-    setTema(!tema);
+  const handleThemeChange = () => {
+    setdarkTheme(!darkTheme);
   };
 
-  const theme = tema ? temaEscuro : temaClaro;
+  const theme = darkTheme ? DarkTheme : lightTheme;
   return (
     <ThemeProvider theme={theme}>
       <div style={{ backgroundColor: theme.palette.primary.dark }}>
-        <Header handleTemaChange={handleTemaChange} tema={tema} />
+        <Header handleThemeChange={handleThemeChange} darkTheme={darkTheme} />
         <Container
           maxWidth="lg"
           sx={{ backgroundColor: theme.palette.primary.main, minHeight: "100vh" }}

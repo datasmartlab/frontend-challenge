@@ -8,14 +8,14 @@ const privateKey = "afa40204a5b1766c14d1f00f14348ce9a922e9f0";
 const timestamp = new Date().getMilliseconds();
 const hash = md5(timestamp + privateKey + publicKey);
 
-export async function getHeroes(offset = 0, limite = 20) {
+export async function getHeroes(offset = 0, limit = 12) {
   const api = axios.create({
     baseURL: baseURL,
     params: {
       apikey: publicKey,
       ts: timestamp,
       hash: hash,
-      limit: limite,
+      limit: limit,
       offset: offset,
     },
   });

@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { lightBlue, grey,red } from "@mui/material/colors";
 
-const temaClaro = createTheme({
+const lightTheme = createTheme({
   palette: {
     info:{
       main:grey["A700"],
@@ -52,34 +52,34 @@ const temaClaro = createTheme({
   },
 });
 
-temaClaro.typography.h3 = {
+lightTheme.typography.h3 = {
   fontSize: "2.2rem",
   "@media (min-width:600px)": {
     fontSize: "1.8rem",
   },
-  [temaClaro.breakpoints.up("md")]: {
+  [lightTheme.breakpoints.up("md")]: {
     fontSize: "2.4rem",
   },
 };
 
-temaClaro.typography.h4 = {
+lightTheme.typography.h4 = {
   fontSize: "2rem",
   "@media (min-width:600px)": {
     fontSize: "1.6rem",
   },
-  [temaClaro.breakpoints.up("md")]: {
+  [lightTheme.breakpoints.up("md")]: {
     fontSize: "2rem",
   },
 };
-temaClaro.typography.body1 = {
+lightTheme.typography.body1 = {
   fontSize: "1.4rem",
   "@media (min-width:600px)": {
     fontSize: "1rem",
   },
-  [temaClaro.breakpoints.up("md")]: {
+  [lightTheme.breakpoints.up("md")]: {
     fontSize: "2rem",
   },
 };
 
 
-export default temaClaro;
+export default lightTheme;

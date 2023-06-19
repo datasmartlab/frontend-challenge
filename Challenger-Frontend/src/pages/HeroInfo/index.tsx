@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation,useNavigate } from "react-router-dom";
 import { getHeroInfo } from "../../services/apiMarvel";
 import {Button, Box,Typography,useTheme} from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -17,17 +17,23 @@ interface HeroInterface {
 export function HeroInfo(){
     const theme = useTheme();
     const location = useLocation();
+    const navigation = useNavigate();
     const [id] = useState(location.state?.id);
     const [hero,setHero]=useState<HeroInterface[]>([])
     
-   const getHeroCallBack =useCallback(async function getHero(){
+   const getHeroCallBack = useCallback(async function getHero(){
         const resposta = await getHeroInfo(id);
         setHero(resposta);
     }
     ,[id])
     useEffect(()=>{
-        getHeroCallBack();
-    },[getHeroCallBack])
+        if(!isNaN(id)){
+            getHeroCallBack();
+        }else{
+            navigation("/");
+        }
+        
+    },[getHeroCallBack,id,navigation])
     
     return(
         <div>
@@ -49,18 +55,18 @@ export function HeroInfo(){
                                     <Typography color={theme.palette.info.light} variant="h3">stories:</Typography>
                                     <Typography sx={{marginBottom:2}} color={theme.palette.info.main} variant="h4">{item.stories.available} histórias</Typography>
                                 </Grid>
-                            <Grid item xs={12} sx={{paddingLeft:2}}>
-                                {item.description!==""?(
-                                    <>
-                                        <Typography color={theme.palette.info.light} sx={{marginBottom:2}} variant="h3">Descrição:</Typography>
-                                        <Typography variant="body1"  color={theme.palette.info.main}>{item.description}</Typography>
-                                    </>
-                                ):(
-                                    <>
-                                        <Typography color={theme.palette.error.main} variant="h4">Sem Descrição </Typography>
-                                    </>
-                                )}
-                                
+                                <Grid item xs={12} sx={{paddingLeft:2}}>
+                                    {item.description!==""?(
+                                        <>
+                                            <Typography color={theme.palette.info.light} sx={{marginBottom:2}} variant="h3">Descrição:</Typography>
+                                            <Typography variant="body1"  color={theme.palette.info.main}>{item.description}</Typography>
+                                        </>
+                                    ):(
+                                        <>
+                                            <Typography color={theme.palette.error.main} variant="h4">Sem Descrição </Typography>
+                                        </>
+                                    )}
+                               
                             </Grid>
                         </Grid>
                     )

@@ -25,26 +25,25 @@ interface RootState {
 export function Home() {
   const [numpages, setNumpages] = useState(0);
   const [offset, setOffset] = useState(0);
-  const [limite] = useState(12);
-  const dispatch: ThunkDispatch<RootState, undefined, AnyAction> =
-    useDispatch();
+  const [limit] = useState(12);
+  const dispatch: ThunkDispatch<RootState, undefined, AnyAction> = useDispatch();
   const heroes = useSelector((state: RootState) => state.heroes);
 
-  const puxarHeroesCallback = useCallback(
-    async function puxarHeroes() {
-      await dispatch(fetchHeroes(offset, limite));
+  const pullHeroesCallback = useCallback(
+    async function pullHeroes() {
+      await dispatch(fetchHeroes(offset, limit));
 
       if (!isNaN(heroes.total)) {
         const count = heroes.total;
-        setNumpages(Math.ceil(count / limite));
+        setNumpages(Math.ceil(count / limit));
       }
     },
-    [dispatch, limite, offset, heroes.total]
+    [dispatch, limit, offset, heroes.total]
   );
 
   useEffect(() => {
-    puxarHeroesCallback();
-  }, [puxarHeroesCallback, offset, limite]);
+    pullHeroesCallback();
+  }, [pullHeroesCallback, offset, limit]);
 
   if (!Array.isArray(heroes.results)) {
     return null;
@@ -90,7 +89,7 @@ export function Home() {
         variant="outlined"
         size="large"
         onChange={(_, value) => {
-          setOffset(value * limite - limite);
+          setOffset(value * limit - limit);
         }}
       />
     </div>

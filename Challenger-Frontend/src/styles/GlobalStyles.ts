@@ -10,11 +10,7 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     font-family: 'Marvel', sans-serif;
   }
-  /* @media (min-width: 62.5rem){
-    body{
-      
-    }
-  } */
+
 `;
 
 export default GlobalStyle;
