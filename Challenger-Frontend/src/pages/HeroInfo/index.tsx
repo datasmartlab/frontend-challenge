@@ -41,8 +41,8 @@ export function HeroInfo(){
                 {hero.map((item)=>{
                     return(
                         <Grid key={item.id} container>
-                            <Grid item xs ><Box sx={{width:"100%",height:"100%",borderRadius:8,paddingX:2,paddingBottom:2}} component="img" src={`${item.thumbnail.path}.${item.thumbnail.extension}`}/></Grid>
-                                <Grid item xs>
+                            <Grid sx={{textAlign:'center',alignItems:'flex-end'}} item xs={12} sm={9}><Box sx={{width:"100%",height:"100%",borderRadius:8,paddingX:2,paddingBottom:2}} component="img" src={`${item.thumbnail.path}.${item.thumbnail.extension}`}/></Grid>
+                                <Grid item xs={12} sm={3}>
                                     <Typography color={theme.palette.info.light} variant="h3">Nome:</Typography>
                                     <Typography sx={{marginBottom:2}} color={theme.palette.info.main} variant="h4">{item.name}</Typography>
                                     
@@ -55,7 +55,7 @@ export function HeroInfo(){
                                     <Typography color={theme.palette.info.light} variant="h3">stories:</Typography>
                                     <Typography sx={{marginBottom:2}} color={theme.palette.info.main} variant="h4">{item.stories.available} histórias</Typography>
                                 </Grid>
-                                <Grid item xs={12} sx={{paddingLeft:2}}>
+                                <Grid item>
                                     {item.description!==""?(
                                         <>
                                             <Typography color={theme.palette.info.light} sx={{marginBottom:2}} variant="h3">Descrição:</Typography>

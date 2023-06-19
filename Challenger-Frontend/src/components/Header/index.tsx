@@ -1,5 +1,4 @@
-import { HeaderContainer } from "./styles";
-import {Button} from "@mui/material"
+import {Box, Button} from "@mui/material"
 import {LightMode,DarkMode} from '@mui/icons-material';
 interface HeaderProps {
   handleThemeChange: () => void;
@@ -8,11 +7,11 @@ interface HeaderProps {
 
 export function Header({handleThemeChange,darkTheme}:HeaderProps) {
   return (
-    <HeaderContainer>
-      <img className="Imagem" src="/images/marvel.svg" />
+    <Box sx={{textAlign:'center',justifyContent:'center',backgroundColor:'#f0141e',color:'#fff'}}>
+      <Box component='img' src="/images/marvel.svg" sx={{width:'10rem'}} />
       <Button size="large" sx={{position: 'absolute', top: 0, right: 0,marginTop:"0.8rem",marginRight:"1rem"}}  variant="contained" onClick={handleThemeChange}>
         {darkTheme?(<DarkMode/>):(<LightMode/>)}
       </Button>
-    </HeaderContainer>
+    </Box>
   );
 }

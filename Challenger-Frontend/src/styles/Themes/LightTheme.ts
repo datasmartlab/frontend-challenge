@@ -4,11 +4,11 @@ import { lightBlue, grey,red } from "@mui/material/colors";
 const lightTheme = createTheme({
   palette: {
     info:{
-      main:grey["A700"],
+      main: grey["A700"],
       light:grey[900]
     },
     primary: {
-      main: grey[200],//cor do container
+      main: grey[200],
       dark: grey[50],
       contrastText: red["A700"],
       
@@ -43,9 +43,7 @@ const lightTheme = createTheme({
               color: grey[50],
               backgroundColor: lightBlue["A700"],
             },
-            
           },
-         
         },
       },
     },
@@ -53,33 +51,33 @@ const lightTheme = createTheme({
 });
 
 lightTheme.typography.h3 = {
-  fontSize: "2.2rem",
+  fontSize: "2.4rem",
   "@media (min-width:600px)": {
-    fontSize: "1.8rem",
+    fontSize: "3rem",
   },
-  [lightTheme.breakpoints.up("md")]: {
-    fontSize: "2.4rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
-
 lightTheme.typography.h4 = {
-  fontSize: "2rem",
+  fontSize: "1.8rem",
   "@media (min-width:600px)": {
-    fontSize: "1.6rem",
+    fontSize: "2.4rem",
   },
-  [lightTheme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
 lightTheme.typography.body1 = {
   fontSize: "1.4rem",
   "@media (min-width:600px)": {
-    fontSize: "1rem",
+    fontSize: "2.8rem",
   },
-  [lightTheme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
+
 
 
 export default lightTheme;

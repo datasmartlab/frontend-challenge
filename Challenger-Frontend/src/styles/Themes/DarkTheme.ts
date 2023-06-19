@@ -4,12 +4,12 @@ import { createTheme } from "@mui/material/styles";
 const DarkTheme = createTheme({
   palette: {
     info:{
-      main:grey[400],
-      light:grey[50]
+      main: grey[400],
+      light: grey[50]
     },
     primary: {
-      main:grey[900], // cor personalizada = #262626
-      dark:grey[800],  // cor personalizada = #333333
+      main: grey[900],
+      dark: grey[800],
       contrastText: red["A700"],
     },
     error:{
@@ -26,15 +26,14 @@ const DarkTheme = createTheme({
           "& .MuiPaginationItem-root": {
             color: red["A700"],
             backgroundColor: grey[50],
-              "&:hover":{
-                color: grey[50],
-                backgroundColor: grey[500],
+            "&:hover":{
+              color: grey[50],
+              backgroundColor: grey[500],
             },
             "&.MuiPaginationItem-ellipsis": {
               background: "none",
               color: red["A700"],
             },
-
           },
           ul: {
             "& .Mui-selected ": {
@@ -49,31 +48,30 @@ const DarkTheme = createTheme({
 });
 
 DarkTheme.typography.h3 = {
-  fontSize: "2.2rem",
+  fontSize: "2.4rem",
   "@media (min-width:600px)": {
-    fontSize: "1.8rem",
+    fontSize: "3rem",
   },
-  [DarkTheme.breakpoints.up("md")]: {
-    fontSize: "2.4rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
-
 DarkTheme.typography.h4 = {
-  fontSize: "2rem",
+  fontSize: "1.8rem",
   "@media (min-width:600px)": {
-    fontSize: "1.6rem",
+    fontSize: "2.4rem",
   },
-  [DarkTheme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
 DarkTheme.typography.body1 = {
   fontSize: "1.4rem",
   "@media (min-width:600px)": {
-    fontSize: "1rem",
+    fontSize: "2.8rem",
   },
-  [DarkTheme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+  "@media (min-width:900px)": {
+    fontSize: "3.4rem",
   },
 };
 
