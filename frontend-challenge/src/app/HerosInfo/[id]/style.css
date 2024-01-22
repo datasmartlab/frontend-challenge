@@ -1,0 +1,49 @@
+.container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    place-content: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+  }
+  
+  .item {
+    width: 56%;
+    overflow: visible;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .swiper {
+    height: 80%;
+    width: 50%;
+
+   }
+   
+   .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #fff;
+   
+     /* Center slide text vertically */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   @keyframes startImage{
+     0%{
+    
+       opacity: 0
+     }
+    
+     100%{
+     
+       opacity: 1
+     }
+     
+   }
+ 
